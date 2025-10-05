@@ -33,7 +33,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio', 'Power Steering', 'Central Lock'],
         'harga_lepas_kunci_12': 350000,
         'harga_lepas_kunci_24': 350000,
-        'harga_driver_dalam': 450000,
+        'harga_driver_dalam': 500000,
         'harga_driver_luar': 550000,
         'deskripsi': 'Mobil city car ekonomis dengan transmisi automatic, cocok untuk perjalanan dalam kota.',
         'foto': 'toyota_agya.jpg'
@@ -49,7 +49,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio', 'Power Steering', 'Central Lock'],
         'harga_lepas_kunci_12': 350000,
         'harga_lepas_kunci_24': 350000,
-        'harga_driver_dalam': 450000,
+        'harga_driver_dalam': 500000,
         'harga_driver_luar': 550000,
         'deskripsi': 'City car compact dengan desain modern dan efisiensi bahan bakar optimal.',
         'foto': 'honda_brio.jpg'
@@ -65,7 +65,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio', 'Power Steering', 'Central Lock'],
         'harga_lepas_kunci_12': 350000,
         'harga_lepas_kunci_24': 350000,
-        'harga_driver_dalam': 450000,
+        'harga_driver_dalam': 500000,
         'harga_driver_luar': 550000,
         'deskripsi': 'Mobil city car dengan performa responsif dan irit bahan bakar.',
         'foto': 'daihatsu_sirion.jpg'
@@ -81,7 +81,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio Premium', 'Magic Seat', 'Rear Camera'],
         'harga_lepas_kunci_12': 500000,
         'harga_lepas_kunci_24': 500000,
-        'harga_driver_dalam': 600000,
+        'harga_driver_dalam': 650000,
         'harga_driver_luar': 700000,
         'deskripsi': 'Hatchback premium dengan desain sporty dan fitur lengkap untuk kenyamanan berkendara.',
         'foto': 'honda_city_hatchback.jpg'
@@ -97,7 +97,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio Premium', 'Magic Seat', 'Rear Camera'],
         'harga_lepas_kunci_12': 500000,
         'harga_lepas_kunci_24': 500000,
-        'harga_driver_dalam': 600000,
+        'harga_driver_dalam': 650000,
         'harga_driver_luar': 700000,
         'deskripsi': 'MPV compact dengan magic seat yang fleksibel untuk berbagai kebutuhan.',
         'foto': 'honda_jazz.jpg'
@@ -113,7 +113,7 @@ MOBIL_DATA = [
         'fitur': ['Panoramic Roof', 'AC Dual Zone', 'Touchscreen', 'Safety System'],
         'harga_lepas_kunci_12': 750000,
         'harga_lepas_kunci_24': 750000,
-        'harga_driver_dalam': 850000,
+        'harga_driver_dalam': 900000,
         'harga_driver_luar': 950000,
         'deskripsi': 'SUV compact dengan panoramic roof dan fitur keselamatan lengkap.',
         'foto': 'honda_hrv.jpg'
@@ -129,7 +129,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio', '7-Seater', 'High Ground Clearance'],
         'harga_lepas_kunci_12': 400000,
         'harga_lepas_kunci_24': 400000,
-        'harga_driver_dalam': 500000,
+        'harga_driver_dalam': 550000,
         'harga_driver_luar': 600000,
         'deskripsi': 'SUV tangguh dengan kapasitas 7 penumpang, cocok untuk keluarga dan berbagai medan.',
         'foto': 'toyota_rush.jpg'
@@ -145,7 +145,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio', '7-Seater', 'Power Window'],
         'harga_lepas_kunci_12': 450000,
         'harga_lepas_kunci_24': 450000,
-        'harga_driver_dalam': 550000,
+        'harga_driver_dalam': 600000,
         'harga_driver_luar': 650000,
         'deskripsi': 'MPV keluarga dengan desain modern dan kapasitas 7 penumpang yang nyaman.',
         'foto': 'toyota_avanza.jpg'
@@ -161,7 +161,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio', '7-Seater', 'Power Window'],
         'harga_lepas_kunci_12': 450000,
         'harga_lepas_kunci_24': 450000,
-        'harga_driver_dalam': 550000,
+        'harga_driver_dalam': 600000,
         'harga_driver_luar': 650000,
         'deskripsi': 'MPV dengan desain dinamis dan kabin luas untuk kenyamanan keluarga.',
         'foto': 'mitsubishi_xpander.jpg'
@@ -177,7 +177,7 @@ MOBIL_DATA = [
         'fitur': ['AC', 'Audio Premium', 'Leather Seat', 'Rear Camera'],
         'harga_lepas_kunci_12': 600000,
         'harga_lepas_kunci_24': 600000,
-        'harga_driver_dalam': 700000,
+        'harga_driver_dalam': 750000,
         'harga_driver_luar': 800000,
         'deskripsi': 'Innova Reborn dengan mesin diesel 2.4 yang bertenaga dan irit.',
         'foto': 'toyota_innova.jpg'
@@ -193,7 +193,7 @@ MOBIL_DATA = [
         'fitur': ['Hybrid Engine', 'AC Dual Zone', 'Premium Audio', 'Smart Key'],
         'harga_lepas_kunci_12': 850000,
         'harga_lepas_kunci_24': 850000,
-        'harga_driver_dalam': 950000,
+        'harga_driver_dalam': 1000000,
         'harga_driver_luar': 1050000,
         'deskripsi': 'MPV hybrid premium dengan teknologi terbaru dan efisiensi bahan bakar optimal.',
         'foto': 'toyota_zenix_hybrid_g.jpg'
@@ -209,7 +209,7 @@ MOBIL_DATA = [
         'fitur': ['Hybrid Engine', 'AC Dual Zone', 'Premium Audio', 'Smart Key', 'Leather Seat'],
         'harga_lepas_kunci_12': 1000000,
         'harga_lepas_kunci_24': 1000000,
-        'harga_driver_dalam': 1100000,
+        'harga_driver_dalam': 1150000,
         'harga_driver_luar': 1200000,
         'deskripsi': 'MPV hybrid varian tertinggi dengan fitur premium dan kenyamanan maksimal.',
         'foto': 'toyota_zenix_hybrid_q.jpg'
@@ -225,7 +225,7 @@ MOBIL_DATA = [
         'fitur': ['GR Sport Package', '4WD', 'Leather Seat', 'Premium Audio'],
         'harga_lepas_kunci_12': 1200000,
         'harga_lepas_kunci_24': 1200000,
-        'harga_driver_dalam': 1300000,
+        'harga_driver_dalam': 1350000,
         'harga_driver_luar': 1400000,
         'deskripsi': 'SUV premium dengan paket GR Sport dan performa tangguh untuk perjalanan eksekutif.',
         'foto': 'toyota_fortuner.jpg'
@@ -241,7 +241,7 @@ MOBIL_DATA = [
         'fitur': ['4WD', 'Leather Seat', 'Premium Audio', 'Safety System'],
         'harga_lepas_kunci_12': 1200000,
         'harga_lepas_kunci_24': 1200000,
-        'harga_driver_dalam': 1300000,
+        'harga_driver_dalam': 1350000,
         'harga_driver_luar': 1400000,
         'deskripsi': 'SUV legendaris dengan kemampuan off-road dan kenyamanan premium.',
         'foto': 'mitsubishi_pajero.jpg'
@@ -257,7 +257,7 @@ MOBIL_DATA = [
         'fitur': ['Hybrid Engine', 'Leather Seat', 'Premium Audio', 'Sunroof'],
         'harga_lepas_kunci_12': 1800000,
         'harga_lepas_kunci_24': 1800000,
-        'harga_driver_dalam': 1900000,
+        'harga_driver_dalam': 1950000,
         'harga_driver_luar': 2000000,
         'deskripsi': 'Sedan executive hybrid dengan kenyamanan dan efisiensi bahan bakar terbaik.',
         'foto': 'toyota_camry.jpg'
@@ -273,7 +273,7 @@ MOBIL_DATA = [
         'fitur': ['Premium Interior', 'Advanced Safety', 'Entertainment System', 'Panoramic Roof'],
         'harga_lepas_kunci_12': 1800000,
         'harga_lepas_kunci_24': 1800000,
-        'harga_driver_dalam': 1900000,
+        'harga_driver_dalam': 1950000,
         'harga_driver_luar': 2000000,
         'deskripsi': 'Mobil luxury dengan fitur premium dan kenyamanan maksimal untuk perjalanan eksekutif.',
         'foto': 'mercedes_benz.jpg'
@@ -289,7 +289,7 @@ MOBIL_DATA = [
         'fitur': ['Transformer Package', 'Leather Seat', 'Entertainment System', 'Premium Audio'],
         'harga_lepas_kunci_12': 2500000,
         'harga_lepas_kunci_24': 2500000,
-        'harga_driver_dalam': 2600000,
+        'harga_driver_dalam': 2650000,
         'harga_driver_luar': 2700000,
         'deskripsi': 'MPV luxury dengan paket transformer dan kenyamanan maksimal untuk perjalanan VIP.',
         'foto': 'toyota_alphard.jpg'

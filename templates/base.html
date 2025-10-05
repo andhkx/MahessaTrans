@@ -1,579 +1,871 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Mahessa Trans - Rental Mobil Terpercaya{% endblock %}</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-red: #DC2626;
-            --dark-red: #991B1B;
-            --light-red: #FEE2E2;
-            --accent-red: #EF4444;
-            --bg-light: #FAFBFC;
-            --surface-light: #FFFFFF;
-            --text-primary: #1F2937;
-            --text-secondary: #6B7280;
-            --border: #E5E7EB;
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Mahessa Trans - Rental Mobil Terpercaya{% endblock %}</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        body {
-            font-family: 'Montserrat', Sans-Serif;
-            color: var(--text-primary);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        /* Navbar */
-        .navbar {
-            background: var(--surface-light) !important;
-            box-shadow: var(--shadow-md);
-            padding: 1rem 0;
-            border-bottom: 3px solid var(--primary-red);
-        }
+  <!-- Custom CSS -->
+  <style>
+:root {
+    --primary-red: #DC2626;
+    --dark-red: #991B1B;
+    --light-red: #FEE2E2;
+    --accent-red: #EF4444;
+    --bg-light: #FAFBFC;
+    --surface-light: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --border: #E5E7EB;
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
 
-        .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary-red) !important;
-            letter-spacing: 0.5px;
-            transition: all 0.3s;
-        }
+    /* RESET & BASE STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .navbar-brand:hover {
-            transform: scale(1.05);
-        }
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
-        .navbar-brand i {
-            color: var(--primary-red);
-            margin-right: 8px;
-        }
+    body {
+      font-family: 'Montserrat', Sans-Serif;
+      color: var(--text-primary);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
 
-        .navbar-nav .nav-link {
-            color: var(--text-primary) !important;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: all 0.3s;
-            position: relative;
-            padding: 8px 0;
-        }
+    /* FULL WIDTH CONTAINER */
+    .container {
+      max-width: 100% !important;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 auto;
+    }
 
-        .navbar-nav .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-red);
-            transition: width 0.3s ease;
-        }
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1140px;
+      }
+    }
 
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: var(--primary-red) !important;
-        }
+    @media (min-width: 1400px) {
+      .container {
+        max-width: 1320px;
+      }
+    }
 
-        .navbar-nav .nav-link:hover::after,
-        .navbar-nav .nav-link.active::after {
-            width: 100%;
-        }
+    /* NAVBAR FULL WIDTH */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85) !important;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+      z-index: 1000;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--bg-light) 0%, var(--light-red) 100%);
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(30px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: -10%;
-            width: 50%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200') center/cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
+    .navbar .container {
+      max-width: 100% !important;
+    }
 
-        .hero-section .container {
-            position: relative;
-            z-index: 1;
-        }
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary-red) !important;
+      letter-spacing: 0.5px;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
 
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
+    .navbar-brand:hover {
+      transform: scale(1.05);
+      color: var(--dark-red) !important;
+    }
 
-        .hero-section h1 span {
-            color: var(--primary-red);
-        }
+    .navbar-brand i {
+      color: var(--primary-red);
+      margin-right: 8px;
+      transition: all 0.3s;
+    }
 
-        .hero-section p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-        }
+    .navbar-nav {
+      align-items: center;
+    }
 
-        .btn-primary-custom {
-            background: var(--primary-red);
-            color: #fff;
-            padding: 14px 40px;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s;
-            box-shadow: var(--shadow-lg);
-            text-decoration: none;
-            display: inline-block;
-        }
+    .navbar-nav .nav-link {
+      color: var(--text-primary) !important;
+      margin: 0 12px;
+      font-weight: 600;
+      transition: all 0.3s;
+      position: relative;
+      padding: 8px 0;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
 
-        .btn-primary-custom:hover {
-            background: var(--dark-red);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-xl);
-            color: #fff;
-        }
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary-red), var(--accent-red));
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
 
-        .btn-outline-light {
-            border: 2px solid var(--primary-red);
-            color: var(--primary-red);
-            background: transparent;
-            padding: 12px 38px;
-        }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--primary-red) !important;
+      transform: translateY(-1px);
+    }
 
-        .btn-outline-light:hover {
-            background: var(--primary-red);
-            color: #fff;
-            border-color: var(--primary-red);
-        }
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
 
-        /* Cards */
-        .card {
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            overflow: hidden;
-            background: var(--surface-light);
-            height: 100%;
-        }
+    .navbar-nav .nav-link i {
+      margin-right: 6px;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-red);
-        }
+    .navbar-nav .nav-link:hover i {
+      transform: scale(1.1);
+    }
 
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            transition: all 0.3s;
-        }
+    /* Mobile Menu Toggle */
+    .navbar-toggler {
+      border: none;
+      padding: 4px 8px;
+      background: transparent;
+      transition: all 0.3s;
+    }
 
-        .card:hover .card-img-top {
-            transform: scale(1.05);
-        }
+    .navbar-toggler:focus {
+      box-shadow: none;
+      outline: none;
+    }
 
-        .badge-custom {
-            background: var(--primary-red);
-            color: #fff;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            display: inline-block;
-        }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28220, 38, 38, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      transition: all 0.3s;
+    }
 
-        /* Section Titles */
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            text-align: center;
-            position: relative;
-            padding-bottom: 1rem;
-        }
+    .navbar-toggler:hover .navbar-toggler-icon {
+      transform: scale(1.1);
+    }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary-red);
-            border-radius: 2px;
-        }
+    /* HERO SECTION FULL WIDTH */
+    .hero-section {
+      background: url('https://imgx.gridoto.com/crop/48x26:1145x745/700x465/photo/2021/09/29/lamborghini-huracan-strasse-whee-20210929080304.jpg') cover;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
 
-        .section-subtitle {
-            color: var(--text-secondary);
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -10%;
+      width: 50%;
+      height: 100%;
+      opacity: 0.1;
+      z-index: 0;
+    }
 
-        /* Features */
-        .feature-box {
-            text-align: center;
-            padding: 40px 30px;
-            border-radius: 16px;
-            background: var(--surface-light);
-            transition: all 0.3s;
-            border: 2px solid var(--border);
-            height: 100%;
-        }
+    .hero-section .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
 
-        .feature-box:hover {
-            background: var(--primary-red);
-            color: #fff;
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-red);
-        }
+    .hero-section h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
 
-        .feature-box i {
-            font-size: 3.5rem;
-            color: var(--primary-red);
-            margin-bottom: 1.5rem;
-            transition: all 0.3s;
-        }
+    .hero-section h1 span {
+      color: var(--primary-red);
+    }
 
-        .feature-box:hover i {
-            color: #fff;
-            transform: scale(1.1);
-        }
+    .hero-section p {
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      color: var(--text-secondary);
+      max-width: 500px;
+    }
 
-        .feature-box h5 {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+    /* BUTTONS */
+    .btn-primary-custom {
+      background: var(--primary-red);
+      color: #fff;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-lg);
+      text-decoration: none;
+      display: inline-block;
+    }
 
-        .feature-box p {
-            margin: 0;
-            opacity: 0.9;
-        }
+    .btn-primary-custom:hover {
+      background: var(--dark-red);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+      color: #fff;
+    }
 
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: #fff;
-            padding: 60px 0 20px;
-            margin-top: 100px;
-            border-top: 4px solid var(--primary-red);
-        }
+    .btn-outline-primary {
+      border: 2px solid var(--primary-red);
+      color: var(--primary-red);
+      background: transparent;
+      padding: 12px 38px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-        .footer h5 {
-            color: var(--primary-red);
-            margin-bottom: 24px;
-            font-weight: 700;
-            font-size: 1.3rem;
-        }
+    .btn-outline-primary:hover {
+      background: var(--primary-red);
+      color: #fff;
+      border-color: var(--primary-red);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
 
-        .footer a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-            margin-bottom: 8px;
-        }
+    .btn-outline-light {
+      border: 2px solid #fff !important;
+      color: #fff !important;
+      background: transparent !important;
+      padding: 12px 38px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-        .footer a:hover {
-            color: var(--primary-red);
-            transform: translateX(5px);
-        }
+    .btn-outline-light:hover {
+      background: #fff !important;
+      color: var(--primary-red) !important;
+      border-color: #fff !important;
+      transform: translateY(-2px);
+    }
 
-        .footer p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 8px;
-        }
+    /* CARDS */
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      overflow: hidden;
+      background: var(--surface-light);
+      height: 100%;
+    }
 
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            margin-right: 12px;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-red);
+    }
 
-        .social-links a:hover {
-            background: var(--primary-red);
-            color: #fff;
-            border-color: var(--primary-red);
-            transform: translateY(-3px) scale(1.1);
-        }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: all 0.3s;
+    }
 
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 65px;
-            font-size: 32px;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s;
-            animation: pulse 2s infinite;
-        }
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
 
-        .whatsapp-float:hover {
-            background: #128C7E;
-            transform: scale(1.15);
-            color: #fff;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
-        }
+    .badge-custom {
+      background: var(--primary-red);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: inline-block;
+    }
 
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-            }
-            50% {
-                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
-            }
-        }
+    /* SECTION TITLES */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
+    }
 
-        /* Price Styling */
-        .text-primary {
-            color: var(--primary-red) !important;
-        }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary-red);
+      border-radius: 2px;
+    }
 
-        .text-success {
-            color: #10B981 !important;
-        }
+    .section-subtitle {
+      color: var(--text-secondary);
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
 
-        /* Buttons */
-        .btn-sm.btn-primary-custom {
-            padding: 8px 20px;
-            font-size: 0.9rem;
-        }
+    /* FEATURES */
+    .feature-box {
+      text-align: center;
+      padding: 40px 30px;
+      border-radius: 16px;
+      background: var(--surface-light);
+      transition: all 0.3s;
+      border: 2px solid var(--border);
+      height: 100%;
+    }
 
-        .btn-outline-primary {
-            border: 2px solid var(--primary-red);
-            color: var(--primary-red);
-            background: transparent;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
+    .feature-box:hover {
+      background: var(--primary-red);
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-red);
+    }
 
-        .btn-outline-primary:hover {
-            background: var(--primary-red);
-            color: #fff;
-            border-color: var(--primary-red);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
+    .feature-box i {
+      font-size: 3.5rem;
+      color: var(--primary-red);
+      margin-bottom: 1.5rem;
+      transition: all 0.3s;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.2rem;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-            .hero-section {
-                min-height: 500px;
-            }
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                line-height: 55px;
-                font-size: 28px;
-                bottom: 20px;
-                right: 20px;
-            }
-        }
+    .feature-box:hover i {
+      color: #fff;
+      transform: scale(1.1);
+    }
 
-        /* Additional Improvements */
-        .bg-light {
-            background-color: var(--bg-light) !important;
-        }
+    .feature-box h5 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
 
-        hr {
-            border-color: var(--border);
-            opacity: 1;
-        }
+    .feature-box p {
+      margin: 0;
+      opacity: 0.9;
+    }
 
-        .card-body {
-            padding: 1.5rem;
-        }
+    /* FOOTER FULL WIDTH */
+    .footer {
+      background: var(--text-primary);
+      color: #fff;
+      padding: 60px 0 20px;
+      margin-top: 100px;
+      border-top: 4px solid var(--primary-red);
+      width: 100%;
+    }
 
-        .card-title {
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-        }
+    .footer h5 {
+      color: var(--primary-red);
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
 
-        small.text-muted {
-            color: var(--text-secondary) !important;
-        }
-    </style>
-    
-    {% block extra_css %}{% endblock %}
+    .footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .footer a:hover {
+      color: var(--primary-red);
+      transform: translateX(5px);
+    }
+
+    .footer p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin-right: 12px;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .social-links a:hover {
+      background: var(--primary-red);
+      color: #fff;
+      border-color: var(--primary-red);
+      transform: translateY(-3px) scale(1.1);
+    }
+
+    /* WHATSAPP FLOAT BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 65px;
+      height: 65px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 65px;
+      font-size: 32px;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: all 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      background: #128C7E;
+      transform: scale(1.15);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      }
+      50% {
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+      }
+    }
+
+    /* Navbar Logo Styles */
+    .navbar-logo {
+      height: 80px;
+      /* Sesuaikan tinggi logo */
+      width: auto;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-brand {
+      padding: 0;
+      /* Hapus padding default */
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand:hover .navbar-logo {
+      transform: scale(1.05);
+    }
+
+    /* Responsive logo */
+    @media (max-width: 768px) {
+      .navbar-logo {
+        height: 60px;
+        /* Lebih kecil di mobile */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-logo {
+        height: 50px;
+        /* Lebih kecil di mobile kecil */
+      }
+    }
+
+    /* SCROLL ANIMATIONS */
+    .scroll-fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-fade-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-fade-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-scale-in {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scroll-fade-in.active,
+    .scroll-fade-in-left.active,
+    .scroll-fade-in-right.active,
+    .scroll-fade-in-up.active,
+    .scroll-scale-in.active {
+      opacity: 1;
+      transform: translate(0) scale(1);
+    }
+
+    .scroll-delay-1 {
+      transition-delay: 0.1s;
+    }
+    .scroll-delay-2 {
+      transition-delay: 0.2s;
+    }
+    .scroll-delay-3 {
+      transition-delay: 0.3s;
+    }
+    .scroll-delay-4 {
+      transition-delay: 0.4s;
+    }
+    .scroll-delay-5 {
+      transition-delay: 0.5s;
+    }
+
+    /* CTA SECTION FIX */
+    .cta-section .btn {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+
+    section[style*="background: var(--primary-red)"] .btn-outline-light {
+      border: 2px solid #fff !important;
+      color: #fff !important;
+      background: transparent !important;
+    }
+
+    section[style*="background: var(--primary-red)"] .btn-outline-light:hover {
+      background: #fff !important;
+      color: var(--primary-red) !important;
+    }
+
+    /* SCROLLBAR CUSTOM */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-red);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--dark-red);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .hero-section {
+        min-height: 500px;
+      }
+      .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+      }
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    /* ADDITIONAL IMPROVEMENTS */
+    .bg-light {
+      background-color: var(--bg-light) !important;
+    }
+
+    hr {
+      border-color: var(--border);
+      opacity: 1;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    small.text-muted {
+      color: var(--text-secondary) !important;
+    }
+
+    /* FIX UNTUK SCROLL OFFSET */
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    /* ROW & COL FIXES */
+    .row {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .col-md-3, .col-md-6, .col-lg-3, .col-lg-4 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  </style>
+
+  {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <i class="fas fa-car"></i>Mahessa Trans
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/syarat"><i class="fas fa-file-contract"></i> Syarat & Ketentuan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/katalog"><i class="fas fa-car-side"></i> Katalog Mobil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cara-sewa"><i class="fas fa-clipboard-list"></i> Cara Sewa</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Content -->
-    {% block content %}{% endblock %}
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5><i class="fas fa-car"></i> Mahessa Trans</h5>
-                    <p>Rental mobil terpercaya dengan armada lengkap dan pelayanan terbaik untuk perjalanan Anda.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5><i class="fas fa-link"></i> Link Cepat</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
-                        <li><a href="/syarat"><i class="fas fa-angle-right"></i> Syarat & Ketentuan</a></li>
-                        <li><a href="/katalog"><i class="fas fa-angle-right"></i> Katalog Mobil</a></li>
-                        <li><a href="/cara-sewa"><i class="fas fa-angle-right"></i> Cara Sewa</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5><i class="fas fa-map-marker-alt"></i> Hubungi Kami</h5>
-                    <p><i class="fas fa-phone"></i> +62 8595-0017-828</p>
-                    <p><i class="fas fa-envelope"></i> sandhymulyana6@gmail.com</p>
-                    <p><i class="fas fa-clock"></i> 24/7 Layanan</p>
-                    
-                    <!-- Google Maps -->
-                    <div class="mt-3">
-                        <a href="https://maps.app.goo.gl/dUtUvc4XA4wB5ooo9" target="_blank" class="btn btn-sm btn-outline-light" style="border-color: var(--primary-red); color: var(--primary-red);">
-                            <i class="fas fa-map"></i> Lihat Lokasi
-                        </a>
-                    </div>
-                    <div class="mt-3">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.854754735714!2d107.5431658!3d-6.8649766!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e50071748999%3A0xf0a12b6c8c0ff58e!2sMahessa%20Rental%20Mobil%20Cimahi!5e0!3m2!1sid!2sid!4v1759636571506!5m2!1sid!2sid" width="100%" height="150" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-            <hr style="background: rgba(255,255,255,0.2)">
-            <div class="text-center">
-                <p>&copy; 2025 Mahessa Trans. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6285950017828?text=Halo%20Mahessa%20Trans%2C%20saya%20ingin%20bertanya%20tentang%20rental%20mobil" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+  <!-- Navbar Glassmorphism -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Mahessa Trans" class="navbar-logo" />
     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/syarat"><i class="fas fa-file-contract"></i> Syarat & Ketentuan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/katalog"><i class="fas fa-car-side"></i> Katalog Mobil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cara-sewa"><i class="fas fa-clipboard-list"></i> Cara Sewa</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JS -->
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
+<!-- Content -->
+<div class="content-wrapper">
+  {% block content %}{% endblock %}
+</div>
 
-        // Active nav link
-        const currentPath = window.location.pathname;
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
-            }
-        });
-    </script>
-    
-    {% block extra_js %}{% endblock %}
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h5><i class="fas fa-car"></i> Mahessa Trans</h5>
+        <p>
+          Rental mobil terpercaya dengan armada lengkap dan pelayanan terbaik untuk perjalanan Anda.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h5><i class="fas fa-link"></i> Link Cepat</h5>
+        <ul class="list-unstyled">
+          <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
+          <li><a href="/syarat"><i class="fas fa-angle-right"></i> Syarat & Ketentuan</a></li>
+          <li><a href="/katalog"><i class="fas fa-angle-right"></i> Katalog Mobil</a></li>
+          <li><a href="/cara-sewa"><i class="fas fa-angle-right"></i> Cara Sewa</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h5><i class="fas fa-map-marker-alt"></i> Hubungi Kami</h5>
+        <p>
+          <i class="fas fa-phone"></i> +62 8122-3530-650
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> sandhymulyana6@gmail.com
+        </p>
+        <p>
+          <i class="fas fa-clock"></i> 24/7 Layanan
+        </p>
+
+        <!-- Google Maps -->
+        <div class="mt-3">
+          <a href="https://maps.app.goo.gl/dUtUvc4XA4wB5ooo9" target="_blank" class="btn btn-sm btn-outline-light" style="border-color: var(--primary-red); color: var(--primary-red);">
+            <i class="fas fa-map"></i> Lihat Lokasi
+          </a>
+        </div>
+        <div class="mt-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.854754735714!2d107.5431658!3d-6.8649766!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e50071748999%3A0xf0a12b6c8c0ff58e!2sMahessa%20Rental%20Mobil%20Cimahi!5e0!3m2!1sid!2sid!4v1759636571506!5m2!1sid!2sid" width="100%" height="150" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <hr style="background: rgba(255,255,255,0.2)">
+    <div class="text-center">
+      <p>
+        &copy; 2025 Mahessa Trans. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/6281223530650?text=Halo%20Mahessa%20Trans%2C%20saya%20ingin%20bertanya%20tentang%20rental%20mobil" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Active nav link
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+
+  // Scroll Animation Functionality
+  function initScrollAnimations() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll(
+      '.scroll-fade-in, .scroll-fade-in-left, .scroll-fade-in-right, ' +
+      '.scroll-fade-in-up, .scroll-scale-in'
+    );
+
+    animatedElements.forEach(el => observer.observe(el));
+  }
+
+  // Smooth scroll for anchor links with offset
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click',
+      function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const navbarHeight = document.querySelector('.navbar').offsetHeight;
+          const targetPosition = target.offsetTop - navbarHeight - 20;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+  });
+
+  // Initialize animations
+  document.addEventListener('DOMContentLoaded', function() {
+    initScrollAnimations();
+
+    // Force hide horizontal overflow
+    document.body.style.overflowX = 'hidden';
+  });
+
+  // Fix on resize
+  window.addEventListener('resize', function() {
+    document.body.style.overflowX = 'hidden';
+  });
+</script>
+
+{% block extra_js %}{% endblock %}
 </body>
 </html>

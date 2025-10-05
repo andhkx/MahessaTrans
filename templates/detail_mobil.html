@@ -62,15 +62,7 @@
                     <div class="col-md-6">
                         <div class="card bg-light">
                             <div class="card-body">
-                                <h6 class="text-muted mb-2">Lepas Kunci (12 Jam)</h6>
-                                <h4 class="text-primary">Rp {{ "{:,}".format(mobil.harga_lepas_kunci_12).replace(',', '.') }}</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card bg-light">
-                            <div class="card-body">
-                                <h6 class="text-muted mb-2">Lepas Kunci (24 Jam)</h6>
+                                <h6 class="text-muted mb-2">Lepas Kunci (1 Hari)</h6>
                                 <h4 class="text-primary">Rp {{ "{:,}".format(mobil.harga_lepas_kunci_24).replace(',', '.') }}</h4>
                             </div>
                         </div>
@@ -94,10 +86,10 @@
                 </div>
                 
                 <div class="mt-4">
-                    <a href="https://wa.me/6285950017828?text=Halo%20Mahessa%20Trans%2C%20saya%20tertarik%20untuk%20menyewa%20{{ mobil.nama }}.%20Mohon%20info%20lebih%20lanjut." 
-                       class="btn btn-primary-custom btn-lg w-100" target="_blank">
+                    <!-- Tombol WhatsApp dengan semua informasi harga -->
+                    <button class="btn btn-primary-custom btn-lg w-100" onclick="sendWhatsAppMessage()">
                         <i class="fab fa-whatsapp"></i> Pesan Sekarang via WhatsApp
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -113,4 +105,58 @@
         </div>
     </div>
 </section>
+
+<script>
+function sendWhatsAppMessage() {
+    // Data mobil
+    const mobilData = {
+        nama: "{{ mobil.nama }}",
+        kategori: "{{ mobil.kategori }}",
+        tahun: "{{ mobil.tahun }}",
+        transmisi: "{{ mobil.transmisi }}",
+        kapasitas: "{{ mobil.kapasitas }}",
+        bahan_bakar: "{{ mobil.bahan_bakar }}",
+        harga_lepas_kunci_12: "{{ '{:,}'.format(mobil.harga_lepas_kunci_12).replace(',', '.') }}",
+        harga_lepas_kunci_24: "{{ '{:,}'.format(mobil.harga_lepas_kunci_24).replace(',', '.') }}",
+        harga_driver_dalam: "{{ '{:,}'.format(mobil.harga_driver_dalam).replace(',', '.') }}",
+        harga_driver_luar: "{{ '{:,}'.format(mobil.harga_driver_luar).replace(',', '.') }}"
+    };
+
+    // Format pesan WhatsApp
+    const message = `Halo Mahessa Trans! 🚗
+
+Saya tertarik untuk menyewa mobil:
+*${mobilData.nama}* (${mobilData.kategori})
+
+📋 *Spesifikasi:*
+- Tahun: ${mobilData.tahun}
+- Transmisi: ${mobilData.transmisi}
+- Kapasitas: ${mobilData.kapasitas} penumpang
+- Bahan Bakar: ${mobilData.bahan_bakar}
+
+💰 *Harga Sewa:*
+• Lepas Kunci (1 Hari): Rp ${mobilData.harga_lepas_kunci_24}
+• Dengan Driver (Dalam Kota): Rp ${mobilData.harga_driver_dalam}
+• Dengan Driver (Luar Kota): Rp ${mobilData.harga_driver_luar}
+
+Mohon informasi lebih lanjut mengenai:
+- Ketersediaan mobil
+- Syarat dan ketentuan sewa
+- Proses pemesanan
+
+Terima kasih! 🙏`;
+
+    // Encode message untuk URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Nomor WhatsApp Mahessa Trans
+    const whatsappNumber = "6281223530650";
+    
+    // Buat URL WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Buka WhatsApp
+    window.open(whatsappUrl, '_blank');
+}
+</script>
 {% endblock %}

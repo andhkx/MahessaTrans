@@ -4,49 +4,58 @@
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="container">
-        <h1>Rental Mobil <span>Terpercaya</span><br>untuk Perjalanan Anda</h1>
-        <p>Mahessa Trans menyediakan armada lengkap dengan harga terjangkau dan pelayanan terbaik untuk kenyamanan perjalanan Anda</p>
-        <div>
-            <a href="/katalog" class="btn btn-primary-custom">
-                <i class="fas fa-car"></i>  Lihat Katalog Mobil
-            </a>
-            <a href="https://wa.me/6285950017828" class="btn btn-outline-primary mt-2 mb-4">
-                <i class="fab fa-whatsapp"></i>  Hubungi Kami
-            </a>
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <br />
+                <h1>Rental Mobil <span>Terpercaya</span><br>untuk Perjalanan Anda</h1>
+                <p class="mx-auto" style="max-width: 400px;">
+                    Mahessa Trans menyediakan armada lengkap dengan harga terjangkau dan pelayanan terbaik untuk kenyamanan perjalanan Anda
+                </p>
+                <div class="d-flex justify-content-center flex-wrap gap-3">
+                    <a href="/katalog" class="btn btn-primary-custom">
+                        <i class="fas fa-car"></i> Lihat Katalog Mobil
+                    </a>
+                    <a href="https://wa.me/6281223530650" class="btn btn-outline-primary mb-4">
+                        <i class="fab fa-whatsapp"></i> Hubungi Kami
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Sections lainnya tetap sama... -->
+
 <!-- Keunggulan -->
 <section class="py-5">
     <div class="container">
-        <h2 class="section-title">Mengapa Pilih Kami?</h2>
-        <p class="section-subtitle">Pelayanan terbaik untuk kenyamanan perjalanan Anda</p>
+        <h2 class="section-title scroll-fade-in-up">Mengapa Pilih Kami?</h2>
+        <p class="section-subtitle scroll-fade-in-up scroll-delay-1">Pelayanan terbaik untuk kenyamanan perjalanan Anda</p>
         
         <div class="row g-4">
             <div class="col-md-3">
-                <div class="feature-box">
+                <div class="feature-box scroll-fade-in-left scroll-delay-1">
                     <i class="fas fa-money-bill-wave"></i>
                     <h5>Harga Terjangkau</h5>
                     <p>Harga kompetitif dengan kualitas terbaik</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="feature-box">
+                <div class="feature-box scroll-fade-in-left scroll-delay-2">
                     <i class="fas fa-car-side"></i>
                     <h5>Mobil Terawat</h5>
                     <p>Armada bersih dan selalu dalam kondisi prima</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="feature-box">
+                <div class="feature-box scroll-fade-in-right scroll-delay-3">
                     <i class="fas fa-user-tie"></i>
                     <h5>Driver Profesional</h5>
                     <p>Driver berpengalaman dan ramah</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="feature-box">
+                <div class="feature-box scroll-fade-in-right scroll-delay-4">
                     <i class="fas fa-clock"></i>
                     <h5>Layanan 24/7</h5>
                     <p>Siap melayani kapan saja Anda butuhkan</p>
@@ -59,13 +68,13 @@
 <!-- Mobil Populer -->
 <section class="py-5 bg-light">
     <div class="container">
-        <h2 class="section-title">Mobil Populer</h2>
-        <p class="section-subtitle">Pilihan mobil favorit pelanggan kami</p>
+        <h2 class="section-title scroll-fade-in-up">Mobil Populer</h2>
+        <p class="section-subtitle scroll-fade-in-up scroll-delay-1">Pilihan mobil favorit pelanggan kami</p>
         
         <div class="row g-4">
             {% for mobil in mobil_populer %}
             <div class="col-md-6 col-lg-3">
-                <div class="card">
+                <div class="card scroll-scale-in scroll-delay-{{ loop.index % 4 + 1 }}">
                     <img src="{{ mobil.foto_url }}" class="card-img-top" alt="{{ mobil.nama }}">
                     <div class="card-body">
                         <span class="badge-custom">{{ mobil.kategori }}</span>
@@ -85,7 +94,7 @@
         </div>
         
         <div class="text-center mt-4">
-            <a href="/katalog" class="btn btn-primary-custom">
+            <a href="/katalog" class="btn btn-primary-custom scroll-fade-in-up">
                 <i class="fas fa-th"></i> Lihat Semua Mobil
             </a>
         </div>
@@ -93,16 +102,23 @@
 </section>
 
 <!-- Call to Action -->
-<section class="py-5" style="background: var(--primary-red); color: #fff;">
+<!-- Call to Action -->
+<section class="py-5 cta-section" style="background: var(--primary-red); color: #fff;">
     <div class="container text-center">
-        <h2 class="mb-3" style="color: #fff;">Siap Memulai Perjalanan Anda?</h2>
-        <p class="lead mb-4">Hubungi kami sekarang untuk booking mobil impian Anda!</p>
-        <a href="https://wa.me/6285950017828?text=Halo%20Mahessa%20Trans%2C%20saya%20ingin%20menyewa%20mobil" class="btn btn-light btn-lg">
-            <i class="fab fa-whatsapp"></i> Chat WhatsApp
-        </a>
-        <a href="/katalog" class="btn btn-outline-light btn-lg ms-2" style="border-color: #fff; color: #fff;">
-            <i class="fas fa-car"></i> Lihat Katalog
-        </a>
+        <h2 class="mb-3 scroll-fade-in-up" style="color: #fff;">Siap Memulai Perjalanan Anda?</h2>
+        <p class="lead mb-4 scroll-fade-in-up scroll-delay-1">Hubungi kami sekarang untuk booking mobil impian Anda!</p>
+        <div class="d-flex justify-content-center flex-wrap">
+            <a href="https://wa.me/6281223530650?text=Halo%20Mahessa%20Trans%2C%20saya%20ingin%20menyewa%20mobil" 
+               class="btn btn-outline-light mb-3" 
+               style="border-color: #fff !important; color: #fff !important;">
+                <i class="fab fa-whatsapp"></i> Chat WhatsApp
+            </a>
+            <a href="/katalog" 
+               class="btn btn-outline-light mb-3" 
+               style="border-color: #fff !important; color: #fff !important;">
+                <i class="fas fa-car"></i> Lihat Katalog
+            </a>
+        </div>
     </div>
 </section>
 {% endblock %}
