@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Cara Sewa - Mahessa Trans{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 80px;">
+    <div class="container">
+        <h1 class="section-title">Cara Sewa Mobil</h1>
+        <p class="section-subtitle">Proses mudah dan cepat untuk rental mobil</p>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body text-center p-5">
+                        <div class="mb-3" style="font-size: 4rem; color: var(--primary-red);">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>1. Hubungi Kami</h3>
+                        <p class="text-muted">Hubungi kami melalui WhatsApp, telepon, atau datang langsung ke kantor kami untuk konsultasi dan pilih mobil yang sesuai kebutuhan Anda.</p>
+                        <a href="https://wa.me/6285950017828" class="btn btn-primary-custom">
+                            <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body text-center p-5">
+                        <div class="mb-3" style="font-size: 4rem; color: var(--primary-red);">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>2. Pilih Mobil</h3>
+                        <p class="text-muted">Lihat katalog kami dan pilih mobil yang Anda inginkan. Tentukan juga apakah Anda memerlukan driver atau lepas kunci.</p>
+                        <a href="/katalog" class="btn btn-primary-custom">
+                            <i class="fas fa-car"></i> Lihat Katalog
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body text-center p-5">
+                        <div class="mb-3" style="font-size: 4rem; color: var(--primary-red);">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h3>3. Lengkapi Persyaratan</h3>
+                        <p class="text-muted">Siapkan KTP, SIM A, dan dokumen yang diperlukan. Isi formulir rental dan lakukan pembayaran DP minimal 30%.</p>
+                        <a href="/syarat" class="btn btn-primary-custom">
+                            <i class="fas fa-info-circle"></i> Lihat Syarat
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body text-center p-5">
+                        <div class="mb-3" style="font-size: 4rem; color: var(--primary-red);">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3>4. Ambil Mobil</h3>
+                        <p class="text-muted">Mobil siap diambil sesuai jadwal. Kami akan antar mobil ke lokasi Anda (dalam kota) atau Anda bisa ambil di kantor kami.</p>
+                        <a href="https://maps.app.goo.gl/T1LVSpPQ6VWx3H6V7" target="_blank" class="btn btn-primary-custom">
+                            <i class="fas fa-map-marker-alt"></i> Lokasi Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Info Tambahan -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="card" style="background: var(--primary-red); color: #fff;">
+                    <div class="card-body p-5">
+                        <h3 class="text-center mb-4" style="color: #fff;"><i class="fas fa-headset"></i> Butuh Bantuan?</h3>
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-phone fa-3x mb-3"></i>
+                                <h5>Telepon</h5>
+                                <p>+62 8595-0017-828</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <i class="fab fa-whatsapp fa-3x mb-3"></i>
+                                <h5>WhatsApp</h5>
+                                <p>Chat langsung dengan kami</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <i class="fas fa-clock fa-3x mb-3"></i>
+                                <h5>Jam Operasional</h5>
+                                <p>24/7 Siap Melayani</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

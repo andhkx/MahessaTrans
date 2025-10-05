@@ -1,0 +1,120 @@
+<!-- ========== templates/kontak.html ========== -->
+{% extends "base.html" %}
+
+{% block title %}Kontak - Mahessa Trans{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 80px;">
+    <div class="container">
+        <h1 class="section-title">Hubungi Kami</h1>
+        <p class="section-subtitle">Kami siap membantu kebutuhan rental mobil Anda</p>
+        
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <div class="contact-form">
+                    <h4 class="mb-4">Formulir Kontak</h4>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Nomor Telepon</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subjek</label>
+                            <select class="form-control" id="subject" required>
+                                <option value="">Pilih Subjek</option>
+                                <option value="Sewa Mobil">Sewa Mobil</option>
+                                <option value="Tanya Harga">Tanya Harga</option>
+                                <option value="Kerjasama Perusahaan">Kerjasama Perusahaan</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100">
+                            <i class="fas fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">Informasi Kontak</h4>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3">
+                                <i class="fas fa-map-marker-alt text-primary fa-lg"></i>
+                            </div>
+                            <div>
+                                <h6>Alamat</h6>
+                                <p class="text-muted">Jl. Contoh Alamat No. 123, Kota Bandung, Jawa Barat</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3">
+                                <i class="fas fa-phone text-primary fa-lg"></i>
+                            </div>
+                            <div>
+                                <h6>Telepon</h6>
+                                <p class="text-muted">+62 812-3456-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3">
+                                <i class="fas fa-envelope text-primary fa-lg"></i>
+                            </div>
+                            <div>
+                                <h6>Email</h6>
+                                <p class="text-muted">info@mahessatrans.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3">
+                                <i class="fas fa-clock text-primary fa-lg"></i>
+                            </div>
+                            <div>
+                                <h6>Jam Operasional</h6>
+                                <p class="text-muted">Senin - Minggu: 24 Jam</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6 class="mb-3">Ikuti Kami</h6>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Contact form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan menghubungi Anda segera.');
+        this.reset();
+    });
+</script>
+{% endblock %}

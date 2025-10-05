@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1>Rental Mobil <span>Terpercaya</span><br>untuk Perjalanan Anda</h1>
+        <p>Mahessa Trans menyediakan armada lengkap dengan harga terjangkau dan pelayanan terbaik untuk kenyamanan perjalanan Anda</p>
+        <div>
+            <a href="/katalog" class="btn btn-primary-custom">
+                <i class="fas fa-car"></i>  Lihat Katalog Mobil
+            </a>
+            <a href="https://wa.me/6285950017828" class="btn btn-outline-primary mt-2 mb-4">
+                <i class="fab fa-whatsapp"></i>  Hubungi Kami
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Keunggulan -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Mengapa Pilih Kami?</h2>
+        <p class="section-subtitle">Pelayanan terbaik untuk kenyamanan perjalanan Anda</p>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h5>Harga Terjangkau</h5>
+                    <p>Harga kompetitif dengan kualitas terbaik</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="fas fa-car-side"></i>
+                    <h5>Mobil Terawat</h5>
+                    <p>Armada bersih dan selalu dalam kondisi prima</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="fas fa-user-tie"></i>
+                    <h5>Driver Profesional</h5>
+                    <p>Driver berpengalaman dan ramah</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="fas fa-clock"></i>
+                    <h5>Layanan 24/7</h5>
+                    <p>Siap melayani kapan saja Anda butuhkan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mobil Populer -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Mobil Populer</h2>
+        <p class="section-subtitle">Pilihan mobil favorit pelanggan kami</p>
+        
+        <div class="row g-4">
+            {% for mobil in mobil_populer %}
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <img src="{{ mobil.foto_url }}" class="card-img-top" alt="{{ mobil.nama }}">
+                    <div class="card-body">
+                        <span class="badge-custom">{{ mobil.kategori }}</span>
+                        <h5 class="card-title mt-2">{{ mobil.nama }}</h5>
+                        <p class="text-muted"><i class="fas fa-users"></i> {{ mobil.kapasitas }} Penumpang | <i class="fas fa-cog"></i> {{ mobil.transmisi }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <small class="text-muted">Mulai dari</small>
+                                <h6 class="text-primary mb-0">Rp {{ "{:,}".format(mobil.harga_lepas_kunci_12).replace(',', '.') }}</h6>
+                            </div>
+                            <a href="/mobil/{{ mobil.id }}" class="btn btn-sm btn-primary-custom">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="/katalog" class="btn btn-primary-custom">
+                <i class="fas fa-th"></i> Lihat Semua Mobil
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5" style="background: var(--primary-red); color: #fff;">
+    <div class="container text-center">
+        <h2 class="mb-3" style="color: #fff;">Siap Memulai Perjalanan Anda?</h2>
+        <p class="lead mb-4">Hubungi kami sekarang untuk booking mobil impian Anda!</p>
+        <a href="https://wa.me/6285950017828?text=Halo%20Mahessa%20Trans%2C%20saya%20ingin%20menyewa%20mobil" class="btn btn-light btn-lg">
+            <i class="fab fa-whatsapp"></i> Chat WhatsApp
+        </a>
+        <a href="/katalog" class="btn btn-outline-light btn-lg ms-2" style="border-color: #fff; color: #fff;">
+            <i class="fas fa-car"></i> Lihat Katalog
+        </a>
+    </div>
+</section>
+{% endblock %}

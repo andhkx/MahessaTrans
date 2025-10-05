@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}{{ mobil.nama }} - Mahessa Trans{% endblock %}
+
+{% block content %}
+<section class="py-5" style="margin-top: 80px;">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/" style="color: var(--primary-red); text-decoration: none;">Home</a></li>
+                <li class="breadcrumb-item"><a href="/katalog" style="color: var(--primary-red); text-decoration: none;">Katalog</a></li>
+                <li class="breadcrumb-item active">{{ mobil.nama }}</li>
+            </ol>
+        </nav>
+        
+        <div class="row g-4">
+            <!-- Gambar Mobil -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <img src="{{ mobil.foto_url }}" class="card-img-top" alt="{{ mobil.nama }}" style="height: 400px; object-fit: cover;">
+                </div>
+            </div>
+            
+            <!-- Info Mobil -->
+            <div class="col-lg-6">
+                <span class="badge-custom mb-2">{{ mobil.kategori }}</span>
+                <h1 class="mb-3">{{ mobil.nama }}</h1>
+                <p class="lead text-muted">{{ mobil.deskripsi }}</p>
+                
+                <hr>
+                
+                <!-- Spesifikasi -->
+                <h5 class="mb-3"><i class="fas fa-cogs"></i> Spesifikasi</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <p class="mb-2"><i class="fas fa-calendar text-primary"></i> <strong>Tahun:</strong> {{ mobil.tahun }}</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="mb-2"><i class="fas fa-cog text-primary"></i> <strong>Transmisi:</strong> {{ mobil.transmisi }}</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="mb-2"><i class="fas fa-users text-primary"></i> <strong>Kapasitas:</strong> {{ mobil.kapasitas }} Penumpang</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="mb-2"><i class="fas fa-gas-pump text-primary"></i> <strong>Bahan Bakar:</strong> {{ mobil.bahan_bakar }}</p>
+                    </div>
+                </div>
+                
+                <!-- Fitur -->
+                <h5 class="mb-3"><i class="fas fa-star"></i> Fitur</h5>
+                <div class="mb-4">
+                    {% for fitur in mobil.fitur %}
+                    <span class="badge bg-secondary me-2 mb-2">✓ {{ fitur }}</span>
+                    {% endfor %}
+                </div>
+                
+                <hr>
+                
+                <!-- Harga -->
+                <h5 class="mb-3"><i class="fas fa-tags"></i> Harga Sewa</h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Lepas Kunci (12 Jam)</h6>
+                                <h4 class="text-primary">Rp {{ "{:,}".format(mobil.harga_lepas_kunci_12).replace(',', '.') }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Lepas Kunci (24 Jam)</h6>
+                                <h4 class="text-primary">Rp {{ "{:,}".format(mobil.harga_lepas_kunci_24).replace(',', '.') }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Dengan Driver (Dalam Kota)</h6>
+                                <h4 class="text-success">Rp {{ "{:,}".format(mobil.harga_driver_dalam).replace(',', '.') }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Dengan Driver (Luar Kota)</h6>
+                                <h4 class="text-success">Rp {{ "{:,}".format(mobil.harga_driver_luar).replace(',', '.') }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="https://wa.me/6285950017828?text=Halo%20Mahessa%20Trans%2C%20saya%20tertarik%20untuk%20menyewa%20{{ mobil.nama }}.%20Mohon%20info%20lebih%20lanjut." 
+                       class="btn btn-primary-custom btn-lg w-100" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Pesan Sekarang via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobil Lainnya -->
+        <div class="mt-5">
+            <h3 class="section-title">Mobil Lainnya</h3>
+            <div class="text-center">
+                <a href="/katalog" class="btn btn-outline-primary">
+                    <i class="fas fa-th"></i> Lihat Katalog Lengkap
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
