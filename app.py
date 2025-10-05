@@ -15,7 +15,7 @@ mahessa-trans/
 """
 
 # ========== app.py ==========
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, url_for
 import os
 
 app = Flask(__name__)
